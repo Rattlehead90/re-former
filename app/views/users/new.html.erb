@@ -1,9 +1,9 @@
-<form method="post" action="/users/" accept-charset="UTF-8" >
+<form method="post" action="/users/" name='user' accept-charset="UTF-8" >
   <label for="username">Username:</label>
-  <input type="text" name="username" id="username">
+  <input type="text" name="user[username]" id="username">
   <label for="email">Email:</label>
-  <input type="email" name="email" id="email">
+  <input type="email" name="user[email]" id="email">
   <label for="password">Password:</label>
-  <input type="password" name="password" id="password">
+  <input type="password" name="user[password]" id="password">
   <button type="submit">Sign Up</button>
 </form>
