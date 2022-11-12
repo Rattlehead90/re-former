@@ -1,9 +1,19 @@
-<form method="post" action="/users/" name='user' accept-charset="UTF-8" >
-  <label for="username">Username:</label>
-  <input type="text" name="user[username]" id="username">
-  <label for="email">Email:</label>
-  <input type="email" name="user[email]" id="email">
-  <label for="password">Password:</label>
-  <input type="password" name="user[password]" id="password">
-  <button type="submit">Sign Up</button>
-</form>
+<!--<form method="post" action="/users/" name='user' accept-charset="UTF-8" >-->
+<!--  <label for="username">Username:</label>-->
+<!--  <input type="text" name="user[username]" id="username">-->
+<!--  <label for="email">Email:</label>-->
+<!--  <input type="email" name="user[email]" id="email">-->
+<!--  <label for="password">Password:</label>-->
+<!--  <input type="password" name="user[password]" id="password">-->
+<!--  <button type="submit">Sign Up</button>-->
+<!--</form>-->
+
+<%= form_with model: @user do |form| %>
+  <%= form.label :username, 'Username:' %>
+  <%= form.text_field :username %>
+  <%= form.label :email, 'Email:' %>
+  <%= form.email_field :email %>
+  <%= form.label :password, 'Password:' %>
+  <%= form.password_field :password %>
+  <%= form.submit 'Sign Up' %>
+<% end %>
